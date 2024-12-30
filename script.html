@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2Z Banking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to A2Z Banking</h1>
+        <p>P.S The code is 1212. Don't use caps. You can only see your previous transactions.</p>
+        <div id="pin-section">
+            <input type="password" id="pin-input" placeholder="Enter PIN">
+            <button onclick="checkPIN()">Submit</button>
+            <p id="pin-message"></p>
+        </div>
+        <div id="banking-section" style="display:none;">
+            <div id="balance-section">
+                <button onclick="displayBalance()">Display Balance</button>
+                <p id="balance"></p>
+            </div>
+            <div id="withdraw-section">
+                <button onclick="showWithdrawForm()">Withdraw Funds</button>
+                <div id="withdraw-form" style="display:none;">
+                    <input type="number" id="withdraw-amount" placeholder="Enter amount">
+                    <button onclick="withdrawFunds()">Withdraw</button>
+                </div>
+                <p id="withdraw-message"></p>
+            </div>
+            <div id="deposit-section">
+                <button onclick="showDepositForm()">Deposit Funds</button>
+                <div id="deposit-form" style="display:none;">
+                    <input type="number" id="deposit-amount" placeholder="Enter amount">
+                    <button onclick="depositFunds()">Deposit</button>
+                </div>
+                <p id="deposit-message"></p>
+            </div>
+            <div id="transactions-section">
+                <button onclick="printTransactions()">Print List of Transactions</button>
+                <ul id="transactions-list"></ul>
+            </div>
+            <button onclick="returnCard()">Return Card</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
